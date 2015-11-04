@@ -55,10 +55,10 @@
         var mymeal100 = qb100.value;
         var mymeal10 = qb10.value;
         var mymeal1 = qb1.value;
-        var mymoney = mymoney100 + mymoney10 + mymoney1
-        var mymeal = mymeal100 + mymeal10 + mymeal1
-        var tip = mymeal*0.15
-        var credit = +mymeal + +tip - +mymoney
+        var mymoney = mymoney100 + mymoney10 + mymoney1;
+        var mymeal = mymeal100 + mymeal10 + mymeal1;
+        var tip = mymeal*0.15;
+        var credit = +mymeal + +tip - +mymoney;
         document.getElementById('result').innerHTML = credit;
         document.getElementById('tip').innerHTML = tip;
       }
