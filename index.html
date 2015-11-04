@@ -8,32 +8,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
 
     <link href="main.css" rel="stylesheet">
 
-    <title>myHTML</title>
+    <title>WebTipCalc</title>
   </head>
   <body>
     <div class="container">
 
       <div class="jumbotron">
-          <h1>pay with credit:</h1>
-          <p id="result"></p>
-          <p>assuming 15%, the tip is:</p>
-          <p id="tip"></p>
-
-          <label for="cost">cost:</label>
-          <input type="number" name="cost" id="cost" />
-
-          <label for="cash">cost:</label>
-          <input type="number" name="cash" id="cash" />
-
-
-          <div class="center-block">
-            <button class="btn btn-default" type="button" onclick='calc()'>calculate!</button>
-          </div>
+        <div class="calc-result">
+          <h1>Pay With Credit:</h1>
+          <h2 id="result"></h2>
+        </div>
+        <p id="tip_p"></p>
+        <p id="tip"></p>
+        <div class="row">
+          <label for="cost">cost</label>
+          <input class="small-number" type="number" name="cost" value="0" size="1" id="cost" />
+        </div>
+        <div class="row">
+          <label for="cash">cash</label>
+          <input class="small-number" type="number" name="cash" value="0" size="1" id="cash" />
+        </div>
+        <label for="tip_percentage">select tip percentage
+        <select id="tip_percentage" name="tip_percentage" class="selectpicker">
+          <option type="number" value="5">5</option>
+          <option type="number" value="10">10</option>
+          <option type="number" value="12">12</option>
+          <option type="number" value="15" selected="selected">15</option>
+          <option type="number" value="20">20</option>
+        </select>
+        </label>
+        <div class="center-block">
+          <button class="btn btn-default" type="button" onclick='calc()'>calculate!</button>
+        </div>
 
       </div>
     </div><!-- /container -->
@@ -42,10 +54,11 @@
       {
         var my_money = cash.value;
         var my_meal = cost.value;
-        var tip = +my_meal*0.15;
+        var tip = +my_meal* +tip_percentage.value / 100;
         document.getElementById('result').innerHTML = +my_meal + +tip - +my_money;
-        document.getElementById('tip').innerHTML = tip;
+        document.getElementById('tip').innerHTML = "tip: " + tip.toString();
       }
     </script>
+
   </body>
 </html> 

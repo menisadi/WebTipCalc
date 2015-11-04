@@ -13,13 +13,17 @@ body {
   margin-right: auto;
 }
 
-
 .p {
 	text-align: center;
 	margin: 0 auto;
 	font-size: 21px;
 }
 
-.num-form {
-	width: 50px;
+.small-number {
+	width: 60px;
+}
+
+.calc-result {
+    border-style: solid;
+    border-width: medium;
 }
