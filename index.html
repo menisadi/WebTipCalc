@@ -26,16 +26,12 @@
      
         <div class="row">
           <form>cash:
-            <input type="number" id="qa100" value="0" min="0" max="9" class="num-form">
-            <input type="number" id="qa10" value="0" min="0" max="9" class="num-form">
-            <input type="number" id="qa1" value="0" min="0" max="9" class="num-form">
+            <input type="number" id="qa" value="0">
           </form>
         </div><!-- /row -->
         <div class="row">
           <form>cost:
-            <input type="number" id="qb100" value="0" min="0" max="9" class="num-form">
-            <input type="number" id="qb10" value="0" min="0" max="9" class="num-form">
-            <input type="number" id="qb1" value="0" min="0" max="9" class="num-form">
+            <input type="number" id="qb" value="0">
           </form>
         </div><!-- /row -->
         <div class="row">
@@ -49,16 +45,11 @@
     <script>
       function calc()
       {
-        var mymoney100 = qa100.value;
-        var mymoney10 = qa10.value;
-        var mymoney1 = qa1.value;        
-        var mymeal100 = qb100.value;
-        var mymeal10 = qb10.value;
-        var mymeal1 = qb1.value;
-        var mymoney = mymoney100 + mymoney10 + mymoney1;
-        var mymeal = mymeal100 + mymeal10 + mymeal1;
-        var tip = mymeal*0.15;
-        var credit = +mymeal + +tip - +mymoney;
+        var my_money = qa.value;
+        var my_meal = qb.value;
+
+        var tip = +my_meal*0.15;
+        var credit = +my_meal + +tip - +my_money;
         document.getElementById('result').innerHTML = credit;
         document.getElementById('tip').innerHTML = tip;
       }
