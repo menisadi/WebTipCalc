@@ -23,34 +23,27 @@
           <p id="result"></p>
           <p>assuming 15%, the tip is:</p>
           <p id="tip"></p>
-     
-        <div class="row">
-          <form>cash:
-            <input type="number" id="qa" value="0">
-          </form>
-        </div><!-- /row -->
-        <div class="row">
-          <form>cost:
-            <input type="number" id="qb" value="0">
-          </form>
-        </div><!-- /row -->
-        <div class="row">
+
+          <label for="cost">cost:</label>
+          <input type="number" name="cost" id="cost" />
+
+          <label for="cash">cost:</label>
+          <input type="number" name="cash" id="cash" />
+
+
           <div class="center-block">
             <button class="btn btn-default" type="button" onclick='calc()'>calculate!</button>
-          </div>  
-        </div><!-- /row -->
+          </div>
 
       </div>
     </div><!-- /container -->
     <script>
       function calc()
       {
-        var my_money = qa.value;
-        var my_meal = qb.value;
-
+        var my_money = cash.value;
+        var my_meal = cost.value;
         var tip = +my_meal*0.15;
-        var credit = +my_meal + +tip - +my_money;
-        document.getElementById('result').innerHTML = credit;
+        document.getElementById('result').innerHTML = +my_meal + +tip - +my_money;
         document.getElementById('tip').innerHTML = tip;
       }
     </script>
