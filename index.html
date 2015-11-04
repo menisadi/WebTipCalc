@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+
+    <link href="main.css" rel="stylesheet">
+
+    <title>myHTML</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="jumbotron">
+          <h1>pay with credit:</h1>
+          <p id="result"></p>
+          <p>assuming 15%, the tip is:</p>
+          <p id="tip"></p>
+     
+        <div class="row">
+          <form>cash:
+            <input type="number" id="qa100" value="0" min="0" max="9" class="num-form">
+            <input type="number" id="qa10" value="0" min="0" max="9" class="num-form">
+            <input type="number" id="qa1" value="0" min="0" max="9" class="num-form">
+          </form>
+        </div><!-- /row -->
+        <div class="row">
+          <form>cost:
+            <input type="number" id="qb100" value="0" min="0" max="9" class="num-form">
+            <input type="number" id="qb10" value="0" min="0" max="9" class="num-form">
+            <input type="number" id="qb1" value="0" min="0" max="9" class="num-form">
+          </form>
+        </div><!-- /row -->
+        <div class="row">
+          <div class="center-block">
+            <button class="btn btn-default" type="button" onclick='calc()'>calculate!</button>
+          </div>  
+        </div><!-- /row -->
+
+      </div>
+    </div><!-- /container -->
+    <script>
+      function calc()
+      {
+        var mymoney100 = qa100.value;
+        var mymoney10 = qa10.value;
+        var mymoney1 = qa1.value;        
+        var mymeal100 = qb100.value;
+        var mymeal10 = qb10.value;
+        var mymeal1 = qb1.value;
+        var mymoney = mymoney100 + mymoney10 + mymoney1
+        var mymeal = mymeal100 + mymeal10 + mymeal1
+        var tip = mymeal*0.15
+        var credit = +mymeal + +tip - +mymoney
+        document.getElementById('result').innerHTML = credit;
+        document.getElementById('tip').innerHTML = tip;
+      }
+    </script>
+  </body>
+</html> 

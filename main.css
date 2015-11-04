@@ -1,0 +1,32 @@
+body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.jumbotron {
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+    float: none;
+    margin: 0 auto;
+
+	  padding: 14px 24px;
+  	font-size: 21px;
+}
+
+.p {
+	text-align: center;
+	margin: 0 auto;
+	font-size: 21px;
+}
+
+.num-form {
+	width: 50px;
+}
