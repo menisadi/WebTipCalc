@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=app.js></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
@@ -22,7 +23,7 @@
       <div class="jumbotron">
         <div class="calc-result">
           <h1>Pay With Credit:</h1>
-          <h2 id="result"></h2>
+          <h2 class="display" id="result"></h2>
         </div>
         <p id="tip_p"></p>
         <p id="tip"></p>
@@ -49,16 +50,6 @@
 
       </div>
     </div><!-- /container -->
-    <script>
-      function calc()
-      {
-        var my_money = cash.value;
-        var my_meal = cost.value;
-        var tip = +my_meal* +tip_percentage.value / 100;
-        document.getElementById('result').innerHTML = +my_meal + +tip - +my_money;
-        document.getElementById('tip').innerHTML = "tip: " + tip.toString();
-      }
-    </script>
 
   </body>
 </html> 
