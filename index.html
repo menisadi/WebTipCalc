@@ -12,7 +12,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
-
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link href="main.css" rel="stylesheet">
 
     <title>WebTipCalc</title>
@@ -23,10 +23,10 @@
       <div class="jumbotron">
         <div class="calc-result">
           <h1>Pay With Credit:</h1>
-          <h2 class="display" id="result"></h2>
+          <h2 class="display" id="result"><br /></h2>
         </div>
-        <p id="tip_p"></p>
-        <p id="tip"></p>
+
+        <p id="tip"><br /></p>
         <div class="row">
           <label for="cost">cost</label>
           <input class="small-number" type="number" name="cost" value="0" size="1" id="cost" />
@@ -38,15 +38,12 @@
         <label for="tip_percentage">select tip percentage
         <select id="tip_percentage" name="tip_percentage" class="selectpicker">
           <option type="number" value="5">5</option>
-          <option type="number" value="10">10</option>
-          <option type="number" value="12">12</option>
-          <option type="number" value="15" selected="selected">15</option>
+          <option type="number" value="10" selected="selected">10</option>
+          <option type="number" value="12.5">12</option>
+          <option type="number" value="15">15</option>
           <option type="number" value="20">20</option>
         </select>
         </label>
-        <div class="center-block">
-          <button class="btn btn-default" type="button" onclick='calc()'>calculate!</button>
-        </div>
 
       </div>
     </div><!-- /container -->
