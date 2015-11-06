@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
 });
 
-$( document ).delegate("#aboutPage", "pageinit", function() {
+$( document ).delegate("pageinit", function() {
     $('input.small-number').on('change', function() {
         var tip = $('#cost').val()*$('#tip_percentage').val()/100;
         var credit = Math.max(+$('#cost').val() + tip - +$('#cash').val(), 0);
