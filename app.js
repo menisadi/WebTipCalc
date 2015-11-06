@@ -1,3 +1,7 @@
+$( document ).bind( "mobileinit", function() {
+    $.mobile.allowCrossDomainPages = true;
+});
+
 $(document).ready(function() {
     $('input.small-number').on('change', function() {
         var tip = $('#cost').val()*$('#tip_percentage').val()/100;
